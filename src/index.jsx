@@ -1,6 +1,6 @@
-// if (process.env.NODE_ENV !== 'production') {
-//   require('./templates/index.pug')
-// }
+if (process.env.NODE_ENV !== 'production') {
+  require('./templates/index.pug')
+}
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -19,7 +19,7 @@ injectTapEventPlugin()
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component/>
+      <Component />
     </AppContainer>,
     document.getElementById('root')
   );

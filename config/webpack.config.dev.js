@@ -56,9 +56,6 @@ module.exports = {
             }
           },
           'stylus-loader'
-        ],
-        include: [
-          resolve(__dirname, 'src/stylesheets')
         ]
       },
       {

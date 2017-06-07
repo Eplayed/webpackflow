@@ -1,64 +1,36 @@
 import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import RaisedButton from 'material-ui/RaisedButton'
-import Dialog from 'material-ui/Dialog'
-import FlatButton from 'material-ui/FlatButton'
-import { GridList, GridTile } from 'material-ui/GridList'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TopBar from './TopBar'
+import MenuDrawer from './MenuDrawer'
+
 import '../stylesheets/App'
 
 class App extends React.Component {
-  state = {
-    open: false,
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      menuDrawOpened: false
+    }
+
+    this.handleMenuIconBtnClick = this.handleMenuIconBtnClick.bind(this)
   }
 
-  handleOpen = () => { this.setState({ open: true }) }
-
-  handleClose = () => { this.setState({ open: false }) }
+  handleMenuIconBtnClick() {
+    this.setState(prevState => ({
+      menuDrawOpened: !prevState.menuDrawOpened
+    }))
+  }
 
   render() {
-    const actions = [
-      <FlatButton
-        key="first"
-        label="关闭"
-        primary={ true }
-        onTouchTap={ this.handleClose }
-      />,
-      <FlatButton
-        key="second"
-        label="确认"
-        primary={ true }
-        keyboardFocused={ true }
-        onTouchTap={ this.handleClose }
-      />,
-    ]
-
     return (
       <MuiThemeProvider>
-        <div className="app">
-          <h1>webpackflow</h1>
-          <div>
-            <GridList
-              cols={ 1 }
-              cellHeight="auto"
-            >
-              <GridTile>
-                <RaisedButton
-                  label="Click Me!"
-                  primary={ true }
-                  onTouchTap={ this.handleOpen }
-                />
-              </GridTile>
-            </GridList>
-            <Dialog
-              title="webpackflow"
-              actions={ actions }
-              modal={ false }
-              open={ this.state.open }
-              onRequestClose={ this.handleClose }
-            >
-              欢迎~，很高兴你使用 webpackflow!!!
-            </Dialog>
-          </div>
+        <div>
+          <TopBar onLeftIconButtonTouchTap={ this.handleMenuIconBtnClick } />
+          <MenuDrawer
+            onRequestChange={ menuDrawOpened => this.setState({ menuDrawOpened }) }
+            docked={ false }
+            open={ this.state.menuDrawOpened } />
         </div>
       </MuiThemeProvider>
     )
