@@ -3,9 +3,7 @@ import AppBar from 'material-ui/AppBar'
 
 class TopBar extends React.Component {
   render() {
-    return <AppBar
-      title="webpackflow"
-      { ...this.props } />
+    return <AppBar title="webpackflow" { ...this.props } />
   }
 }
 

@@ -8,25 +8,14 @@ import '../stylesheets/App'
 class App extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      menuDrawOpened: false
-    }
-
-    this.handleMenuIconBtnClick = this.handleMenuIconBtnClick.bind(this)
-  }
-
-  handleMenuIconBtnClick() {
-    this.setState(prevState => ({
-      menuDrawOpened: !prevState.menuDrawOpened
-    }))
+    this.state = { menuDrawOpened: false }
   }
 
   render() {
     return (
       <MuiThemeProvider>
         <div>
-          <TopBar onLeftIconButtonTouchTap={ this.handleMenuIconBtnClick } />
+          <TopBar onLeftIconButtonTouchTap={ () => { this.setState(prevState => ({ menuDrawOpened: !prevState.menuDrawOpened })) } } />
           <MenuDrawer
             onRequestChange={ menuDrawOpened => this.setState({ menuDrawOpened }) }
             docked={ false }
