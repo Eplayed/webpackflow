@@ -97,7 +97,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: resolve(__dirname, '../src/fac.ico')
+        from: resolve(__dirname, '../src/fav.ico')
       }
     ]),
     new ExtractTextPlugin({

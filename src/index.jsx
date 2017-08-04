@@ -8,13 +8,7 @@ import ReactDOM from 'react-dom'
 // AppContainer is a necessary wrapper component for HMR
 import { AppContainer } from 'react-hot-loader'
 
-// See more
-// https://github.com/facebook/react/issues/436
-import injectTapEventPlugin from 'react-tap-event-plugin'
-
 import App from './components/App'
-
-injectTapEventPlugin()
 
 const render = (Component) => {
   ReactDOM.render(
@@ -25,9 +19,11 @@ const render = (Component) => {
   );
 };
 
-render(App);
+render(App)
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./components/App', () => { render(App) })
+  module.hot.accept('./components/App', () => {
+    render(require('./components/App').default)
+  })
 }
