@@ -6,12 +6,12 @@ const postcss = require('postcss')
 const sprites = require('postcss-sprites')
 const glob = require('glob')
 
-glob(resolve(__dirname, '../build/*.css'), {}, (err, files) => {
+glob(resolve(__dirname, '../build/stylesheets/*.css'), {}, (err, files) => {
   files.forEach(file => {
     const css = fs.readFileSync(file, 'utf8')
     const spritesOpt = {
-      stylesheetPath: resolve(__dirname, '../build'),
-      spritePath: resolve(__dirname, '../build'),
+      stylesheetPath: resolve(__dirname, '../build/stylesheets'),
+      spritePath: resolve(__dirname, '../build/images'),
       retina: true,
       verbose: true,
       hooks: {

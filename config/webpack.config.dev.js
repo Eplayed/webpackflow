@@ -23,6 +23,7 @@ module.exports = {
     host: '0.0.0.0',
     inline: true,
     compress: true,
+    historyApiFallback: true,
     port: 8080,
     contentBase: resolve(__dirname, '../src')
   },

@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, '../build'),
-    filename: '[chunkhash].js',
+    filename: 'scripts/[chunkhash].js',
   },
   resolve: {
     extensions: [ '.js', '.jsx', '.styl' ]
@@ -55,7 +55,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[sha512:hash:base64:8].[ext]',
+              name: 'images/[sha512:hash:base64:8].[ext]',
             }
           }
         ]
@@ -66,7 +66,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              name: '[sha512:hash:base64:8].[ext]',
+              name: 'images/[sha512:hash:base64:8].[ext]',
               limit: 2000
             }
           }
@@ -101,7 +101,7 @@ module.exports = {
       }
     ]),
     new ExtractTextPlugin({
-      filename: '[contenthash].css'
+      filename: 'stylesheets/[sha512:contenthash:base64:8].css'
     })
   ]
 }
