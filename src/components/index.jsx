@@ -80,7 +80,7 @@ class Index extends Component {
               <h1>
                 <Button onClick={ () => this.setState({ open: true }) } color="contrast">webpackflow</Button>
               </h1>
-              <h3>Ver: 1.0.0</h3>
+              <h3>Ver: 2.0.0</h3>
               <div>
                 <a href="https://github.com/cntanglijun/webpackflow">
                   <img src="https://img.shields.io/github/stars/cntanglijun/webpackflow.svg?style=social&label=Star" />
