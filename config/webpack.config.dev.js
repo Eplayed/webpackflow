@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const { resolve, join } = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const autoprefixer = require('autoprefixer')
@@ -14,7 +14,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: [ '.js', '.jsx', '.styl' ]
+    extensions: [ '.js', '.jsx' ]
   },
   performance: false,
   devtool: 'inline-source-map',

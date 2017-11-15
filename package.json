@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -x \"webpack-dev-server --config ./config/webpack.config.dev.js --colors \"",
-    "build": "rimraf ./build && webpack --config ./config/webpack.config.prod.js --progress --colors && node ./config/sprites.js",
+    "build": "rimraf ./build && webpack --config ./config/webpack.config.prod.js --progress --colors && node ./scripts/sprites.js",
     "deploy": "npm test && gh-pages -d build",
     "test": "eslint \"**/*.js\" \"**/*.jsx\""
   },

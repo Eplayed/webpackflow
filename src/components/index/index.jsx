@@ -3,8 +3,8 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import { Grid, Paper, Button } from 'material-ui'
 import map from 'lodash.map'
 import Dialog, { DialogTitle, DialogActions, DialogContent, DialogContentText } from 'material-ui/Dialog'
-
-import '../stylesheets/index'
+import webpackflowLogo from '../../images/logo/webpackflow.svg'
+import './index.styl'
 
 class Index extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Index extends Component {
       feature: [
         {
           name: 'webpack',
-          link: './#/webpack'
+          link: './webpack'
         },
         {
           name: 'react',
@@ -40,7 +40,7 @@ class Index extends Component {
         },
         {
           name: 'css-sprite',
-          link: './#/css-sprite'
+          link: './css-sprite'
         },
         {
           name: 'eslint',
@@ -76,7 +76,7 @@ class Index extends Component {
 
           <header>
             <Paper className="title">
-              <div className="webpackflow-logo" style={ { backgroundImage: 'url(' + require('../images/logo/webpackflow.svg') + ')' } }></div>
+              <div className="webpackflow-logo" style={ { backgroundImage: 'url(' + webpackflowLogo + ')' } }></div>
               <h1>
                 <Button onClick={ () => this.setState({ open: true }) } color="contrast">webpackflow</Button>
               </h1>
@@ -96,7 +96,7 @@ class Index extends Component {
                     <Grid key={ index } className="grid" item={ true } xs={ 12 } sm={ 6 } md={ 4 }>
                       <Paper className="item">
                         <a href={ subitem.link || '###' }>
-                          <div className="logo" style={ { backgroundImage: 'url(' + require('../images/logo/' + subitem.name + '.svg') + ')' } }></div>
+                          <div className="logo" style={ { backgroundImage: 'url(' + require('../../images/logo/' + subitem.name + '.svg') + ')' } }></div>
                           <div className="info">
                             <h3>{ subitem.name }</h3>
                           </div>

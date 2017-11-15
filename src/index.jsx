@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom'
 // AppContainer is a necessary wrapper component for HMR
 import { AppContainer } from 'react-hot-loader'
 
-import Routers from './components/routers'
+import Routers from './routers'
 
 const render = Component => {
   ReactDOM.render(
@@ -23,5 +23,5 @@ render(Routers)
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept([ './components/routers' ], () => render(Routers))
+  module.hot.accept([ './routers' ], () => render(Routers))
 }

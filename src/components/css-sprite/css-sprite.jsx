@@ -1,5 +1,6 @@
-import '../stylesheets/css-sprite'
 import React, { Component } from 'react'
+
+import './css-sprite.styl'
 
 class CssSprite extends Component {
   constructor(props) {
