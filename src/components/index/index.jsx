@@ -20,7 +20,7 @@ class Index extends Component {
       feature: [
         {
           name: 'webpack',
-          link: './webpack'
+          link: './#/webpack'
         },
         {
           name: 'react',
@@ -40,7 +40,7 @@ class Index extends Component {
         },
         {
           name: 'css-sprite',
-          link: './css-sprite'
+          link: './#/css-sprite'
         },
         {
           name: 'eslint',
@@ -91,7 +91,7 @@ class Index extends Component {
 
           { map(items, (item, key) => (
               <section key={ 'section' + key }>
-                <Grid className="grid-wrapper" container={ true } gutter={ 0 }>
+                <Grid className="grid-wrapper" container={ true }>
                   { map(item, (subitem, index) => (
                     <Grid key={ index } className="grid" item={ true } xs={ 12 } sm={ 6 } md={ 4 }>
                       <Paper className="item">
