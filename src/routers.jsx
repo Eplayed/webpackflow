@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
-import { Index, Webpack, CssSprite } from './app'
+
+import {
+  Index,
+  Webpack,
+  CssSprite,
+  ReactPage
+} from './app'
 
 class Routers extends Component {
   render() {
@@ -9,7 +15,8 @@ class Routers extends Component {
         <div>
           <Route exact path="/" component={ Index } />
           <Route path="/webpack" component={ Webpack } />
-          <Route path="/css-sprite" component={ CssSprite } />
+          <Route path="/csssprite" component={ CssSprite } />
+          <Route path="/react" component={ ReactPage } />
         </div>
       </Router>
     )

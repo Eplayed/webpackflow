@@ -4,7 +4,7 @@ import { Grid, Paper, Button } from 'material-ui'
 import map from 'lodash.map'
 import Dialog, { DialogTitle, DialogActions, DialogContent, DialogContentText } from 'material-ui/Dialog'
 import webpackflowLogo from '../../images/logo/webpackflow.svg'
-import './index.styl'
+import './Index.styl'
 
 class Index extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Index extends Component {
         },
         {
           name: 'react',
-          link: 'https://facebook.github.io/react/'
+          link: './#/react'
         },
         {
           name: 'pug',

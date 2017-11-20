@@ -1,10 +1,10 @@
 # webpackflow
 
-> 基于 webpack2 + react + stylus + HMR 的开发模版
+> 基于 webpack + react + stylus + HMR 的开发模版
 
 ## 特性
 
-- [x] webpack2
+- [x] webpack
 - [x] react
 - [x] material-ui
 - [x] stylus

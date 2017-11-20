@@ -1,3 +1,4 @@
-export Index from './components/index/index'
-export Webpack from './components/webpack/webpack'
-export CssSprite from './components/css-sprite/css-sprite'
+export Index from './components/Index/Index'
+export Webpack from './components/Webpack/Webpack'
+export CssSprite from './components/CssSprite/CssSprite'
+export ReactPage from './components/React/React'
