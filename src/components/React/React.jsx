@@ -11,13 +11,13 @@ class ReactPage extends Component {
     return (
       <Paper className="react">
         <header>
-          <h1>react</h1>
+          <h1>React</h1>
           <a href="https://reactjs.org/">
             <img src="https://img.shields.io/github/release/facebook/react.svg" />
           </a>
         </header>
-        <Typography type="body1" component="p">
-          react 是用于构建用户界面的 JavaScript 库
+        <Typography type="body1" component="Rp">
+          React 是用于构建用户界面的 JavaScript 库
         </Typography>
 
         <h3>声明式</h3>

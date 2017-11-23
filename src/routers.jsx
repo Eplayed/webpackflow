@@ -5,7 +5,9 @@ import {
   Index,
   Webpack,
   CssSprite,
-  ReactPage
+  ReactPage,
+  Pug,
+  Stylus
 } from './app'
 
 class Routers extends Component {
@@ -17,6 +19,8 @@ class Routers extends Component {
           <Route path="/webpack" component={ Webpack } />
           <Route path="/csssprite" component={ CssSprite } />
           <Route path="/react" component={ ReactPage } />
+          <Route path="/pug" component={ Pug } />
+          <Route path="/stylus" component={ Stylus } />
         </div>
       </Router>
     )

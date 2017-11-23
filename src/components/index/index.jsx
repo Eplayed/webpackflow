@@ -28,11 +28,11 @@ class Index extends Component {
         },
         {
           name: 'pug',
-          link: 'https://pugjs.org/api/getting-started.html'
+          link: './#/pug'
         },
         {
           name: 'stylus',
-          link: 'http://stylus-lang.com/'
+          link: './#/stylus'
         },
         {
           name: 'postcss',
