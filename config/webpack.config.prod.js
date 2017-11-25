@@ -8,14 +8,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: {
     main: resolve(__dirname, '../src/index.jsx'),
-    vendor: [ 'react', 'react-dom' ]
+    vendor: [ 'react', 'react-dom', 'material-ui' ]
   },
   output: {
     path: resolve(__dirname, '../build'),
     filename: 'scripts/[chunkhash].js',
   },
   resolve: {
-    extensions: [ '.js', '.jsx', '.styl' ]
+    extensions: [ '.js', '.jsx' ]
   },
   module: {
     rules: [
@@ -30,6 +30,7 @@ module.exports = {
       {
         test: /.styl$/,
         use: ExtractTextPlugin.extract({
+          publicPath: '../',
           fallback: 'style-loader',
           use: [
             {
@@ -50,7 +51,7 @@ module.exports = {
         })
       },
       {
-        test: /.(jpg|gif|svg)$/,
+        test: /.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -62,6 +63,9 @@ module.exports = {
       },
       {
         test: /.png$/,
+        exclude: [
+          resolve(__dirname, '../src/components/PostCssSprite')
+        ],
         use: [
           {
             loader: 'url-loader',

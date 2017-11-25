@@ -3,7 +3,7 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import { Grid, Paper, Button } from 'material-ui'
 import map from 'lodash.map'
 import Dialog, { DialogTitle, DialogActions, DialogContent, DialogContentText } from 'material-ui/Dialog'
-import webpackflowLogo from '../../images/logo/webpackflow.svg'
+import webpackflowLogo from './webpackflow.svg'
 import './Index.styl'
 
 class Index extends Component {
@@ -36,19 +36,19 @@ class Index extends Component {
         },
         {
           name: 'postcss',
-          link: 'http://postcss.org/'
+          link: './#/postcss'
         },
         {
-          name: 'css-sprite',
-          link: './#/css-sprite'
+          name: 'post-css-sprite',
+          link: './#/PostCssSprite'
         },
         {
           name: 'eslint',
-          link: 'http://eslint.org/'
+          link: './#/eslint'
         },
         {
           name: 'material-ui',
-          link: 'https://material-ui-1dab0.firebaseapp.com/'
+          link: './#/materialui'
         }
       ]
     }
@@ -96,7 +96,7 @@ class Index extends Component {
                     <Grid key={ index } className="grid" item={ true } xs={ 12 } sm={ 6 } md={ 4 }>
                       <Paper className="item">
                         <a href={ subitem.link || '###' }>
-                          <div className="logo" style={ { backgroundImage: 'url(' + require('../../images/logo/' + subitem.name + '.svg') + ')' } }></div>
+                          <div className="logo" style={ { backgroundImage: 'url(' + require('./' + subitem.name + '.svg') + ')' } }></div>
                           <div className="info">
                             <h3>{ subitem.name }</h3>
                           </div>

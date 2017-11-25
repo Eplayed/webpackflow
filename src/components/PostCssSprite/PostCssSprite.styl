@@ -1,0 +1,20 @@
+.csssprite
+  margin 20px
+  padding 15px
+
+  header
+    padding-bottom 10px
+    margin-bottom 10px
+    border-bottom 1px dashed #ccc
+
+  .icon
+    display inline-block
+    width 48px
+    height 48px
+    background-repeat no-repeat
+    background-size cover
+    background-position center
+
+    for num in (1..5)
+      &.icon{num}
+        background-image url(./num.png)

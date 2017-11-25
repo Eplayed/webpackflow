@@ -6,18 +6,20 @@ const postcss = require('postcss')
 const sprites = require('postcss-sprites')
 const glob = require('glob')
 
-glob(resolve(__dirname, '../build/stylesheets/*.css'), {}, (err, files) => {
+const buildRoot = resolve(__dirname, '../build')
+
+glob(resolve(buildRoot, 'stylesheets/*.css'), {}, (err, files) => {
   files.forEach(file => {
     const css = fs.readFileSync(file, 'utf8')
     const spritesOpt = {
-      stylesheetPath: resolve(__dirname, '../build/stylesheets'),
-      spritePath: resolve(__dirname, '../build/images'),
+      stylesheetPath: resolve(buildRoot, 'stylesheets'),
+      spritePath: resolve(buildRoot, 'images'),
       retina: true,
       verbose: true,
       hooks: {
         onSaveSpritesheet: (opts, spritesheet) => {
           const sourceImages = Object.keys(spritesheet.coordinates)
-          const filename = crypto.createHmac('sha512', Math.random().toString()).digest('hex').slice(0, 8)
+          const filename = crypto.createHash('sha512').digest('base64').slice(0, 8)
 
           del(sourceImages)
 

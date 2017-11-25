@@ -4,10 +4,13 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import {
   Index,
   Webpack,
-  CssSprite,
+  PostCssSprite,
   ReactPage,
   Pug,
-  Stylus
+  Stylus,
+  PostCSS,
+  Eslint,
+  MaterialUI
 } from './app'
 
 class Routers extends Component {
@@ -17,10 +20,13 @@ class Routers extends Component {
         <div>
           <Route exact path="/" component={ Index } />
           <Route path="/webpack" component={ Webpack } />
-          <Route path="/csssprite" component={ CssSprite } />
+          <Route path="/PostCssSprite" component={ PostCssSprite } />
           <Route path="/react" component={ ReactPage } />
           <Route path="/pug" component={ Pug } />
           <Route path="/stylus" component={ Stylus } />
+          <Route path="/postcss" component={ PostCSS } />
+          <Route path="/eslint" component={ Eslint } />
+          <Route path="/materialui" component={ MaterialUI } />
         </div>
       </Router>
     )

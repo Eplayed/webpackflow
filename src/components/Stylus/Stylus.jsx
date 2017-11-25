@@ -11,13 +11,13 @@ class Stylus extends Component {
     return (
       <Paper className="stylus">
         <header>
-          <h1>Stylus</h1>
+          <h1>stylus</h1>
           <a href="http://stylus-lang.com/">
             <img src="https://img.shields.io/github/release/stylus/stylus.svg" />
           </a>
         </header>
         <Typography type="body1" component="p">
-          Stylus 是一个革命性的新语言，提供高效，动态，以及富有表现力的方式来生成 CSS。缩进语法和传统 CSS 风格都支持。
+          stylus 是一个革命性的新语言，提供高效，动态，以及富有表现力的方式来生成 css。缩进语法和传统 css 风格都支持。
         </Typography>
       </Paper>
     )
