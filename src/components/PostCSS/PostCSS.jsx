@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Paper, Typography } from 'material-ui'
 
-import './Postcss.styl'
+import './PostCSS.styl'
 
 class PostCSS extends Component {
   constructor(props) {
